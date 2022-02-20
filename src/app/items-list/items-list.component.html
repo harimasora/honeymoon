@@ -1,0 +1,5 @@
+<ul>
+  <li *ngFor="let item of item$ | async">
+    <app-item [item]="item" (buyItemTapped)="updateStatus($event)"></app-item>
+  </li>
+</ul>

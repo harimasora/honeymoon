@@ -1,0 +1,9 @@
+<img src="{{ item.image }}" alt="{{ item.name }}" />
+<p>Localização: {{ item.location }}</p>
+<p>Categoria: {{ item.category }}</p>
+<p>Preço: {{ item.price }}</p>
+<p>Restantes: {{ item.stock }}</p>
+
+<p [class]="available ? '' : 'out-of-stock'">{{ item.name }}</p>
+
+<button (click)="buy()" [disabled]="!available">Comprar</button>
